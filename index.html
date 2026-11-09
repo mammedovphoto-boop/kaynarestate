@@ -468,6 +468,22 @@ input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-
 @media(max-width:600px){.agency-card{grid-template-columns:92px 1fr;gap:14px}.agency-card img{width:92px;height:92px}.agency-card b{font-size:21px}.agency{width:100%}}
 @media (hover:none),(pointer:coarse),(max-width:899px){.nav.hide{transform:none}}
 
+
+/* v3.6 mobile performance */
+@media (hover:none),(pointer:coarse),(max-width:899px){
+  body::after{display:none}
+  .aurora i{animation:none!important;filter:none!important}
+  .hero-gul,.contacts .bg-gul{animation:none!important}
+  .gold-text,.hero h1 .l2 span{animation:none!important}
+  .badge{animation:none!important}
+  .nav.scrolled,.mbar,.prog,.agency,.btn-ghost,.badge{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+  .nav.scrolled{background:rgba(251,248,243,.97)}
+  .mbar{background:rgba(251,248,243,.98)}
+  .prog{background:#fbf8f3}
+  .badge{background:#16110f}
+  .p-tilt{transform:none!important}
+}
+
 /* reveal fallback (no GSAP) */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
 .reveal.in{opacity:1;transform:none}
@@ -537,7 +553,6 @@ input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-
       <div class="p-tilt" id="ptilt">
         <div class="p-arch"><svg viewBox="0 0 100 125" preserveAspectRatio="none"><path id="archPath" pathLength="1" d="M2 123V50A48 48 0 0 1 98 50V123Z"/></svg></div>
         <div class="p-frame" id="pframe"><img id="heroImg" src="/hero.jpg" alt="Мяхри Кайнарова" width="900" height="1200" fetchpriority="high"></div>
-        <div class="ptag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span data-i18n="ptag">Квартиры · Дома · Новостройки</span></div>
         <div class="badge"><div class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></div><div><strong data-i18n="badge_t">Сделка под ключ</strong><small data-i18n="badge_s">Проверка документов и безопасное оформление</small></div></div>
       </div>
     </div>
@@ -820,16 +835,16 @@ tm:{
 
 /* ---------- options ---------- */
 const OPT = {
- goal:[["buy","Купить","Satyn almak"],["sell","Продать","Satmak"],["inv","Инвестировать","Maýa goýmak"],["rent","Снять в аренду","Kärendesine almak"]],
+ goal:[["buy","Купить","Satyn almak"],["sell","Продать","Satmak"],["inv","Инвестировать","Maýa goýmak"],["rent","Снять в аренду","Kärendä almak"]],
  ptype:[["flat","Квартира","Kwartira"],["house","Дом / коттедж (ховлы)","Howly / kottej"],["land","Участок","Ýer bölegi"],["com","Коммерческая","Täjirçilik emlägi"]],
  rooms:[["1","1","1"],["2","2","2"],["3","3","3"],["4","4","4"],["5","5+","5+"]],
- floor:[["any","Не важно","Tapawudy ýok"],["n1","Не первый","Birinji däl"],["nl","Не последний","Iň soňky däl"],["low","Низкий (1–3)","Pes (1–3)"],["mid","Средний","Orta"],["high","Высокий","Ýokary"]],
+ floor:[["any","Не важно","Tapawudy ýok"],["n1","Не первый","Birinji gat däl"],["nl","Не последний","Iň ýokarky gat däl"],["low","Низкий (1–3)","Pes (1–3)"],["mid","Средний","Orta"],["high","Высокий","Ýokary"]],
  build:[["new","Новостройка (элитка)","Täze jaý (elitka)"],["old","Старый фонд","Köne jaý"],["any","Не важно","Tapawudy ýok"]],
- repair:[["none","Без ремонта","Remontsyz"],["need","Требует ремонта","Remont gerek"],["good","Хороший ремонт","Gowy remontly"],["euro","Евро / дизайнерский","Ýewro / dizaýn remont"],["any","Не важно","Tapawudy ýok"]],
+ repair:[["none","Без ремонта","Remontsyz"],["need","Требует ремонта","Remont gerek"],["good","Хороший ремонт","Gowy remont"],["euro","Евро / дизайнерский","Ýewroremont / dizaýn"],["any","Не важно","Tapawudy ýok"]],
  furn:[["yes","С мебелью","Mebelli"],["no","Без мебели","Mebelsiz"],["any","Не важно","Tapawudy ýok"]],
  pay:[["cash","Наличные","Nagt"],["inst","Рассрочка","Möhletleýin töleg"],["mort","Ипотека","Ipoteka"],["swap","Обмен","Çalyşmak"]],
- time:[["now","Срочно","Gyssagly"],["m1","В течение месяца","Bir aýyň dowamynda"],["m3","1–3 месяца","1–3 aý"],["look","Пока присматриваюсь","Häzirlikçe seredýärin"]],
- extra:[["lift","Лифт","Lift"],["park","Парковка","Awtoduralga"],["balc","Балкон","Balkon"],["school","Рядом школа и детсад","Golaýda mekdep we çagalar bagy"],["quiet","Тихий двор","Asuda howly"],["view","Вид на горы","Daglara garaýan"],["docs","Готовые документы","Resminamalary taýýar"],["pets","Можно с животными","Öý haýwanlary bilen bolýar"]],
+ time:[["now","Срочно","Gyssagly"],["m1","В течение месяца","Bir aýyň dowamynda"],["m3","1–3 месяца","1–3 aý"],["look","Пока присматриваюсь","Häzirlikçe diňe seredýärin"]],
+ extra:[["lift","Лифт","Lift"],["park","Парковка","Awtoduralga"],["balc","Балкон","Balkon"],["school","Рядом школа и детсад","Golaýda mekdep we çagalar bagy"],["quiet","Тихий двор","Asuda howly"],["view","Вид на горы","Daglara görnüşli"],["docs","Готовые документы","Resminamalary taýýar"],["pets","Можно с животными","Öý haýwany bilen bolýar"]],
  contact:[["wa","WhatsApp","WhatsApp"],["imo","imo","imo"],["ig","Instagram","Instagram"],["call","Звонок","Jaň"],["sms","SMS","SMS"]]
 };
 
@@ -1057,6 +1072,17 @@ Object.assign(T.tm,{
  f2_t:"Resminamalar barlanan", f2_d:"Öňünden töleg etmezden öň",
  f3_t:"Siziň bähbidiňize söwda", f3_d:"Iň gowy baha we şertler üçin",
  f4_t:"Elmydama aragatnaşykda", f4_d:"WhatsApp, imo, Instagram"}); T.tm.hero_eyebrow="Rieltor · Aşgabatda gozgalmaýan emläk";
+Object.assign(T.tm,{
+ nav_cta:"Arza galdyryň", hero_cta:"Jaý saýlaşalyň",
+ badge_t:"Doly goldawly geleşik",
+ s_lead:"Gözlegden başlap eýeçilik hukugyny hasaba aldyrmaga çenli ähli işi öz üstüme alýaryn. Siz artykmaç aladasyz netije alýarsyňyz.",
+ st3_t:"Görkeziş we baha gepleşigi",
+ clear:"Arassalaň", q_price:"Isleýän satuw bahaňyz", q_extra:"Ýene näme möhüm?",
+ submit:"Arzany taýýarlaň", send_s:"Nirä ibermelidigini saýlaň — tekst awtomatik goşular.", copy:"Göçürip al",
+ ig_note:"Tekst göçürildi. Instagram açylýar — teksti @kaynar.estate sahypasyna hat edip goýuň we iberiň.",
+ progress:"Arzanyň doldurylyşy",
+ a_p2:"Jaý satyn almak — durmuşdaky iň uly kararlaryň biri. Şonuň üçin men elmydama dogrusyny aýdýaryn, hatda ol siziň eşitmek isleýän zadyňyz bolmasa-da: emlägiň hakyky bahasyny aýdýaryn, resminamalary görkezilişden öň barlaýaryn we artyk tölemezligiňiz üçin gepleşik geçirýärin.",
+ f1_t:"Adalatly baha", f2_d:"Öňünden töleg berilmänkä", f3_t:"Siziň bähbidiňize gepleşik"});
 
 /* marquee of districts */
 const MQ = ["mkr","area","sub"];
@@ -1190,12 +1216,14 @@ gsap.set(".reveal",{opacity:0,y:40});
 ScrollTrigger.batch(".reveal",{start:"top 90%",once:true,
   onEnter:b=>gsap.to(b,{opacity:1,y:0,duration:1.15,ease:"expo.out",stagger:.1,overwrite:true})});
 
+if(!touch){
 gsap.to("#heroImg",{yPercent:9,ease:"none",scrollTrigger:{trigger:".hero",start:"top top",end:"bottom top",scrub:true}});
 gsap.to(".skyline",{y:60,ease:"none",scrollTrigger:{trigger:".hero",start:"top top",end:"bottom top",scrub:true}});
 gsap.to(".hero-txt",{y:-40,ease:"none",scrollTrigger:{trigger:".hero",start:"center center",end:"bottom top",scrub:true}});
 gsap.fromTo("#aboutImg",{yPercent:-10},{yPercent:0,ease:"none",scrollTrigger:{trigger:".about-pic",start:"top bottom",end:"bottom top",scrub:true}});
 $$(".bg-gul").forEach(g=>gsap.fromTo(g,{rotate:-20,scale:.9},{rotate:25,scale:1.1,ease:"none",scrollTrigger:{trigger:g.parentElement,start:"top bottom",end:"bottom top",scrub:true}}));
 
+}
 /* steps: line fills, dots light up */
 const steps=$("#steps");
 const vfill=document.createElement("i"); vfill.className="vfill"; steps.appendChild(vfill);
@@ -1207,8 +1235,8 @@ $$(".step").forEach((s,i)=>{
 });
 
 /* marquee leans with scroll speed */
-const mq=$(".marquee"); const skew=gsap.quickTo(mq,"skewX",{duration:.5,ease:"power3"});
-ScrollTrigger.create({onUpdate:self=>skew(gsap.utils.clamp(-6,6,self.getVelocity()/-260))});
+if(!touch){const mq=$(".marquee"); const skew=gsap.quickTo(mq,"skewX",{duration:.5,ease:"power3"});
+ScrollTrigger.create({onUpdate:self=>skew(gsap.utils.clamp(-6,6,self.getVelocity()/-260))});}
 
 /* phone number reveal */
 gsap.from(".phone-big",{letterSpacing:"0.12em",opacity:0,duration:1.6,ease:"expo.out",scrollTrigger:{trigger:".phone-big",start:"top 90%"}});
