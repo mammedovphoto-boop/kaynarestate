@@ -450,6 +450,24 @@ section,.hero{scroll-margin-top:0}
 input[type=number]{-moz-appearance:textfield;appearance:textfield}
 input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
 
+
+/* v3.5 agency + stable mobile nav */
+.agency{display:inline-flex;align-items:center;gap:14px;margin-top:22px;padding:8px 18px 8px 8px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.65);backdrop-filter:blur(6px);text-decoration:none;color:var(--text);transition:border-color .3s,transform .4s var(--ease),box-shadow .4s}
+.agency:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 14px 30px -18px rgba(60,40,20,.5)}
+.agency img{width:46px;height:46px;object-fit:cover;object-position:50% 40%;border-radius:11px;flex:none}
+.agency small{display:block;font-size:11.5px;letter-spacing:.06em;color:var(--muted);font-weight:600}
+.agency b{display:block;font-family:var(--serif);font-size:21px;font-weight:600;letter-spacing:.06em;line-height:1.1;color:#0f4a33}
+.agency .ag-arr{width:16px;height:16px;color:var(--gold-lo);margin-left:4px}
+.agency-card{display:grid;grid-template-columns:118px 1fr;gap:20px;align-items:center;margin:6px 0 4px;padding:14px;border:1px solid var(--line);border-radius:18px;background:#fff;text-decoration:none;color:var(--text);transition:border-color .3s,transform .5s var(--ease),box-shadow .5s}
+.agency-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 20px 40px -26px rgba(60,40,20,.55)}
+.agency-card img{width:118px;height:118px;border-radius:12px;object-fit:cover}
+.agency-card small{font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--gold-lo)}
+.agency-card b{display:block;font-family:var(--serif);font-size:24px;font-weight:600;line-height:1.15;margin:4px 0 6px}
+.agency-card p{font-size:14.5px!important;margin:0 0 6px!important;color:var(--muted)}
+.agency-card .ag-ig{font-size:13.5px;font-weight:700;color:#0f4a33}
+@media(max-width:600px){.agency-card{grid-template-columns:92px 1fr;gap:14px}.agency-card img{width:92px;height:92px}.agency-card b{font-size:21px}.agency{width:100%}}
+@media (hover:none),(pointer:coarse),(max-width:899px){.nav.hide{transform:none}}
+
 /* reveal fallback (no GSAP) */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
 .reveal.in{opacity:1;transform:none}
@@ -513,6 +531,7 @@ input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.98L2 22l5.17-1.5A9.9 9.9 0 1 0 12.04 2Zm4.5 11.96c-.25-.12-1.46-.72-1.69-.8-.23-.08-.39-.12-.55.12-.17.25-.64.8-.78.97-.14.16-.29.18-.53.06a6.7 6.7 0 0 1-3.32-2.9c-.25-.43.25-.4.72-1.33.08-.16.04-.3-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47a.9.9 0 0 0-.65.3 2.73 2.73 0 0 0-.85 2.03 4.74 4.74 0 0 0 1 2.52 10.86 10.86 0 0 0 4.15 3.67c1.55.67 2.15.73 2.93.61.47-.07 1.46-.6 1.66-1.17.2-.58.2-1.07.15-1.17-.06-.1-.22-.17-.47-.29Z"/></svg>WhatsApp</a>
       </div>
       <div class="pillars h-in"><span data-i18n="p1">Продажа</span><span data-i18n="p2">Покупка</span><span data-i18n="p3">Инвестиции</span><span data-i18n="p4">Юридическое сопровождение</span></div>
+      <a class="agency h-in" href="https://www.instagram.com/leader_estate.tm/" target="_blank" rel="noopener"><img src="/le-icon.jpg" alt="Leader Estate" width="210" height="290"><span><small data-i18n="ag_small">Агент агентства недвижимости</small><b>Leader Estate</b></span><svg class="ag-arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
     </div>
     <div class="portrait">
       <div class="p-tilt" id="ptilt">
@@ -570,6 +589,7 @@ input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-
       <p class="reveal" data-i18n="a_p1"></p>
       <p class="reveal" data-i18n="a_p2"></p>
       <div class="quote reveal" data-i18n="a_quote"></div>
+      <a class="agency-card reveal" href="https://www.instagram.com/leader_estate.tm/" target="_blank" rel="noopener"><img src="/le-logo.jpg" alt="Leader Estate — Real Estate Excellence" width="500" height="500" loading="lazy"><div><small data-i18n="ag_lbl">Агентство</small><b data-i18n="ag_t">Работаю в агентстве Leader Estate</b><p data-i18n="ag_d">Агентство недвижимости в Ашхабаде, в команде которого я работаю.</p><span class="ag-ig">@leader_estate.tm →</span></div></a>
       <div class="facts reveal">
         <div class="fact"><b data-i18n="f1_t"></b><span data-i18n="f1_d"></span></div>
         <div class="fact"><b data-i18n="f2_t"></b><span data-i18n="f2_d"></span></div>
@@ -1015,7 +1035,9 @@ const touch = matchMedia('(hover: none), (pointer: coarse)').matches;
 const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
 
 T.ru.progress = "Заявка заполнена"; T.tm.progress = "Arza dolduryldy";
-T.ru.ptag="Квартиры · Дома · Новостройки"; T.tm.ptag="Kwartiralar · Howlular · Täze jaýlar";
+T.ru.ptag="Квартиры · Дома · Новостройки";
+Object.assign(T.ru,{ag_small:"Агент агентства недвижимости",ag_lbl:"Агентство",ag_t:"Работаю в агентстве Leader Estate",ag_d:"Агентство недвижимости в Ашхабаде, в команде которого я работаю."});
+Object.assign(T.tm,{ag_small:"Gozgalmaýan emläk agentliginiň agenti",ag_lbl:"Agentlik",ag_t:"Leader Estate agentliginde işleýärin",ag_d:"Aşgabatdaky gozgalmaýan emläk agentligi, men onuň toparynda işleýärin."}); T.tm.ptag="Kwartiralar · Howlular · Täze jaýlar";
 T.ru.hero_eyebrow="Риэлтор · Недвижимость в Ашхабаде";
 Object.assign(T.ru,{
  a_title:"Работаю на ваш результат",
