@@ -494,6 +494,23 @@ input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-
 .le-sub{font-size:5px;letter-spacing:.14em;color:#e7cf96;font-weight:700;white-space:nowrap;opacity:.9}
 @media(max-width:600px){.le-big{width:92px;height:92px;padding:6px 4px}.le-big .le-m{width:40px;height:50px}.le-name{font-size:8.4px;letter-spacing:.04em}.le-sub{font-size:4px;letter-spacing:.1em}}
 
+
+/* v3.8 imo / Instagram helper */
+.help{margin-top:16px;border:1px solid rgba(201,166,121,.55);background:#fff;border-radius:16px;padding:18px 18px 16px;animation:pop .4s var(--ease)}
+.help .h-ok{display:block;color:#2c7a4b;font-size:15px;margin-bottom:10px}
+.help ol{margin:0 0 14px 20px;font-size:15px;line-height:1.55;color:var(--text)}
+.help li{margin-bottom:6px}
+.h-btns{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.h-btns .sbtn{padding:13px 10px;font-size:14px}
+.h-tip{margin-top:12px;font-size:13px;color:var(--muted)}
+@media(max-width:420px){.h-btns{grid-template-columns:1fr}}
+
+
+/* v3.9 original Leader Estate logo */
+.le-tile img{display:block;width:auto;height:40px;object-fit:contain}
+.le-big{padding:10px}
+.le-big img{width:100%;height:auto}
+
 /* reveal fallback (no GSAP) */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
 .reveal.in{opacity:1;transform:none}
@@ -559,7 +576,7 @@ input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.98L2 22l5.17-1.5A9.9 9.9 0 1 0 12.04 2Zm4.5 11.96c-.25-.12-1.46-.72-1.69-.8-.23-.08-.39-.12-.55.12-.17.25-.64.8-.78.97-.14.16-.29.18-.53.06a6.7 6.7 0 0 1-3.32-2.9c-.25-.43.25-.4.72-1.33.08-.16.04-.3-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47a.9.9 0 0 0-.65.3 2.73 2.73 0 0 0-.85 2.03 4.74 4.74 0 0 0 1 2.52 10.86 10.86 0 0 0 4.15 3.67c1.55.67 2.15.73 2.93.61.47-.07 1.46-.6 1.66-1.17.2-.58.2-1.07.15-1.17-.06-.1-.22-.17-.47-.29Z"/></svg>WhatsApp</a>
       </div>
       <div class="pillars h-in"><span data-i18n="p1">Продажа</span><span data-i18n="p2">Покупка</span><span data-i18n="p3">Инвестиции</span><span data-i18n="p4">Юридическое сопровождение</span></div>
-      <a class="agency h-in" href="https://www.instagram.com/leader_estate.tm/" target="_blank" rel="noopener"><span class="le-tile" aria-hidden="true"><svg><use href="#le-mark"/></svg></span><span><small data-i18n="ag_small">Агент агентства недвижимости</small><b>Leader Estate</b></span><svg class="ag-arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+      <a class="agency h-in" href="https://www.instagram.com/leader_estate.tm/" target="_blank" rel="noopener"><span class="le-tile" aria-hidden="true"><img src="/le-mark.png" alt="" width="133" height="200"></span><span><small data-i18n="ag_small">Агент агентства недвижимости</small><b>Leader Estate</b></span><svg class="ag-arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
     </div>
     <div class="portrait">
       <div class="p-tilt" id="ptilt">
@@ -616,7 +633,7 @@ input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-
       <p class="reveal" data-i18n="a_p1"></p>
       <p class="reveal" data-i18n="a_p2"></p>
       <div class="quote reveal" data-i18n="a_quote"></div>
-      <a class="agency-card reveal" href="https://www.instagram.com/leader_estate.tm/" target="_blank" rel="noopener"><span class="le-tile le-big" role="img" aria-label="Leader Estate — Real Estate Excellence"><svg class="le-m"><use href="#le-mark"/></svg><span class="le-name">LEADER ESTATE</span><span class="le-sub">REAL ESTATE EXCELLENCE</span></span><div><small data-i18n="ag_lbl">Агентство</small><b data-i18n="ag_t">Работаю в агентстве Leader Estate</b><p data-i18n="ag_d">Агентство недвижимости в Ашхабаде, в команде которого я работаю.</p><span class="ag-ig">@leader_estate.tm →</span></div></a>
+      <a class="agency-card reveal" href="https://www.instagram.com/leader_estate.tm/" target="_blank" rel="noopener"><span class="le-tile le-big"><img src="/le-full.png" alt="Leader Estate — Real Estate Excellence" width="520" height="463" loading="lazy"></span><div><small data-i18n="ag_lbl">Агентство</small><b data-i18n="ag_t">Работаю в агентстве Leader Estate</b><p data-i18n="ag_d">Агентство недвижимости в Ашхабаде, в команде которого я работаю.</p><span class="ag-ig">@leader_estate.tm →</span></div></a>
       <div class="facts reveal">
         <div class="fact"><b data-i18n="f1_t"></b><span data-i18n="f1_d"></span></div>
         <div class="fact"><b data-i18n="f2_t"></b><span data-i18n="f2_d"></span></div>
@@ -720,11 +737,12 @@ input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-
         <div class="send-btns">
           <a class="sbtn wa" id="sWa" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.98L2 22l5.17-1.5A9.9 9.9 0 1 0 12.04 2Zm4.5 11.96c-.25-.12-1.46-.72-1.69-.8-.23-.08-.39-.12-.55.12-.17.25-.64.8-.78.97-.14.16-.29.18-.53.06a6.7 6.7 0 0 1-3.32-2.9c-.25-.43.25-.4.72-1.33.08-.16.04-.3-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47a.9.9 0 0 0-.65.3 2.73 2.73 0 0 0-.85 2.03 4.74 4.74 0 0 0 1 2.52 10.86 10.86 0 0 0 4.15 3.67c1.55.67 2.15.73 2.93.61.47-.07 1.46-.6 1.66-1.17.2-.58.2-1.07.15-1.17-.06-.1-.22-.17-.47-.29Z"/></svg>WhatsApp</a>
           <button type="button" class="sbtn" id="sImo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12a8 8 0 0 1-11.8 7L4 20.5l1.5-5A8 8 0 1 1 21 12Z"/></svg>imo</button>
-          <button type="button" class="sbtn" id="sIg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Instagram</button>
+          <a class="sbtn" id="sIg" href="https://ig.me/m/kaynar.estate" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Instagram</a>
           <a class="sbtn" id="sSms" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="14" rx="3"/><path d="M7 9h10M7 13h6"/></svg>SMS</a>
           <button type="button" class="sbtn" id="sCopy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg><span data-i18n="copy">Копировать</span></button>
         </div>
         <div class="note" id="note" aria-live="polite"></div>
+        <div class="help" id="help" hidden></div>
       </div>
     </form>
   </div>
@@ -1031,17 +1049,43 @@ document.getElementById("form").addEventListener("submit", e=>{
 });
 document.getElementById("name").addEventListener("input",()=>{ if(val("name")) document.getElementById("nameErr").style.display="none"; });
 
-async function copyText(){
-  try{ await navigator.clipboard.writeText(message); return true; }
-  catch(e){
-    try{ const ta=document.createElement("textarea"); ta.value=message; ta.style.position="fixed"; ta.style.opacity="0"; document.body.appendChild(ta); ta.select(); const ok=document.execCommand("copy"); ta.remove(); return ok; }
-    catch(e2){ return false; }
-  }
+function copySync(txt){
+  let ok=false;
+  try{
+    const ta=document.createElement("textarea"); ta.value=txt; ta.setAttribute("readonly","");
+    ta.style.cssText="position:fixed;top:0;left:0;opacity:0;font-size:16px";
+    document.body.appendChild(ta); ta.focus(); ta.select(); ta.setSelectionRange(0,txt.length);
+    ok=document.execCommand("copy"); ta.remove();
+  }catch(e){}
+  try{ if(navigator.clipboard) navigator.clipboard.writeText(txt).catch(()=>{}); ok=true; }catch(e){}
+  return ok;
+}
+const HELP={
+ ru:{ok:"✓ Текст заявки скопирован",
+     imo:["Откройте приложение imo","Найдите контакт +993 61 99 11 00 (или добавьте номер)","Нажмите на поле сообщения → «Вставить» → Отправить"],
+     ig:["Сейчас откроется Instagram, диалог с @kaynar.estate","Нажмите на поле сообщения → «Вставить»","Нажмите «Отправить»"],
+     again:"Скопировать ещё раз", num:"Скопировать номер", openig:"Открыть Instagram", numok:"Номер скопирован",
+     tip:"Быстрее всего — через WhatsApp или SMS: там текст подставляется сам."},
+ tm:{ok:"✓ Arzanyň teksti göçürildi",
+     imo:["imo programmasyny açyň","+993 61 99 11 00 belgini tapyň (ýa-da belgini goşuň)","Hat ýazylýan ýere basyň → «Goýmak» → Ibermek"],
+     ig:["Häzir Instagram açylar, @kaynar.estate bilen hat alyşmak","Hat ýazylýan ýere basyň → «Goýmak»","«Ibermek» düwmesine basyň"],
+     again:"Ýene göçürip al", num:"Belgini göçürip al", openig:"Instagram-y açmak", numok:"Belgi göçürildi",
+     tip:"Iň çalt ýoly — WhatsApp ýa-da SMS: olarda tekst özi goşulýar."}};
+function showHelp(kind){
+  const h=HELP[lang], box=document.getElementById("help");
+  box.innerHTML="<b class='h-ok'>"+h.ok+"</b><ol>"+h[kind].map(x=>"<li>"+esc(x)+"</li>").join("")+"</ol>"+
+    "<div class='h-btns'><button type='button' class='sbtn' id='hAgain'>"+h.again+"</button>"+
+    (kind==="imo" ? "<button type='button' class='sbtn' id='hNum'>"+h.num+"</button>" : "<a class='sbtn' href='https://ig.me/m/"+IG+"' target='_blank' rel='noopener'>"+h.openig+"</a>")+
+    "</div><p class='h-tip'>"+h.tip+"</p>";
+  box.hidden=false;
+  document.getElementById("hAgain").onclick=()=>{ copySync(message); note(h.ok.replace("✓ ",""),true); };
+  const n=document.getElementById("hNum"); if(n) n.onclick=()=>{ copySync("+99361991100"); note(h.numok,true); };
+  box.scrollIntoView({behavior:"smooth",block:"nearest"});
 }
 function note(txt,ok){ const n=document.getElementById("note"); n.textContent=txt; n.className="note"+(ok?" ok":""); }
-document.getElementById("sCopy").onclick=async()=>{ note(await copyText()?T[lang].copied:T[lang].copy_fail, true); };
-document.getElementById("sImo").onclick=async()=>{ const ok=await copyText(); note(ok?T[lang].imo_note:T[lang].copy_fail, ok); };
-document.getElementById("sIg").onclick=async()=>{ const ok=await copyText(); note(ok?T[lang].ig_note:T[lang].copy_fail, ok); const a=document.createElement("a"); a.href="https://ig.me/m/"+IG; a.target="_blank"; a.rel="noopener"; document.body.appendChild(a); a.click(); a.remove(); };
+document.getElementById("sCopy").onclick=()=>{ note(copySync(message)?T[lang].copied:T[lang].copy_fail, true); };
+document.getElementById("sImo").onclick=()=>{ copySync(message); note("",true); showHelp("imo"); };
+document.getElementById("sIg").addEventListener("click",()=>{ copySync(message); note("",true); showHelp("ig"); });
 
 /* ---------- chrome ---------- */
 const nav=document.getElementById("nav"), mbar=document.getElementById("mbar");
