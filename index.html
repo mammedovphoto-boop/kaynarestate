@@ -484,6 +484,16 @@ input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-
   .p-tilt{transform:none!important}
 }
 
+
+/* v3.7 vector Leader Estate logo */
+.le-tile{flex:none;display:grid;place-items:center;width:52px;height:52px;border-radius:13px;background:linear-gradient(135deg,#11603f,#083823);box-shadow:inset 0 0 0 1px rgba(240,211,142,.25),0 8px 18px -10px rgba(8,56,35,.7)}
+.le-tile svg{width:38px;height:48px;display:block}
+.le-big{width:118px;height:118px;border-radius:16px;align-content:center;gap:2px;padding:8px 6px}
+.le-big .le-m{width:46px;height:58px}
+.le-name{font-family:var(--serif);font-weight:600;font-size:10.5px;letter-spacing:.06em;line-height:1;background:linear-gradient(100deg,#f6e2a8,#d4a94f 50%,#f0d38e);-webkit-background-clip:text;background-clip:text;color:transparent;white-space:nowrap}
+.le-sub{font-size:5px;letter-spacing:.14em;color:#e7cf96;font-weight:700;white-space:nowrap;opacity:.9}
+@media(max-width:600px){.le-big{width:92px;height:92px;padding:6px 4px}.le-big .le-m{width:40px;height:50px}.le-name{font-size:8.4px;letter-spacing:.04em}.le-sub{font-size:4px;letter-spacing:.1em}}
+
 /* reveal fallback (no GSAP) */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
 .reveal.in{opacity:1;transform:none}
@@ -498,6 +508,8 @@ input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-
 <body>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <linearGradient id="leGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6e2a8"/><stop offset=".45" stop-color="#d4a94f"/><stop offset=".7" stop-color="#f0d38e"/><stop offset="1" stop-color="#a87a2c"/></linearGradient>
+  <symbol id="le-mark" viewBox="20 10 60 80"><g fill="none" stroke="url(#leGold)" stroke-width="1.8"><path d="M33 66V44L42 36"/><path d="M42 66V32L52 16V66"/><path d="M52 16L58 24V66"/><path d="M47 66V30"/><path d="M62 66V34L68 40V66"/></g><text x="50" y="82" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-weight="600" font-size="40" letter-spacing="-3" fill="url(#leGold)">LE</text></symbol>
   <symbol id="gul" viewBox="0 0 240 170">
     <path d="M50 9H190L232 51V119L190 161H50L8 119V51Z"/>
     <path d="M62 23H178L218 59V111L178 147H62L22 111V59Z"/>
@@ -547,7 +559,7 @@ input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.98L2 22l5.17-1.5A9.9 9.9 0 1 0 12.04 2Zm4.5 11.96c-.25-.12-1.46-.72-1.69-.8-.23-.08-.39-.12-.55.12-.17.25-.64.8-.78.97-.14.16-.29.18-.53.06a6.7 6.7 0 0 1-3.32-2.9c-.25-.43.25-.4.72-1.33.08-.16.04-.3-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47a.9.9 0 0 0-.65.3 2.73 2.73 0 0 0-.85 2.03 4.74 4.74 0 0 0 1 2.52 10.86 10.86 0 0 0 4.15 3.67c1.55.67 2.15.73 2.93.61.47-.07 1.46-.6 1.66-1.17.2-.58.2-1.07.15-1.17-.06-.1-.22-.17-.47-.29Z"/></svg>WhatsApp</a>
       </div>
       <div class="pillars h-in"><span data-i18n="p1">Продажа</span><span data-i18n="p2">Покупка</span><span data-i18n="p3">Инвестиции</span><span data-i18n="p4">Юридическое сопровождение</span></div>
-      <a class="agency h-in" href="https://www.instagram.com/leader_estate.tm/" target="_blank" rel="noopener"><img src="/le-icon.jpg" alt="Leader Estate" width="210" height="290"><span><small data-i18n="ag_small">Агент агентства недвижимости</small><b>Leader Estate</b></span><svg class="ag-arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+      <a class="agency h-in" href="https://www.instagram.com/leader_estate.tm/" target="_blank" rel="noopener"><span class="le-tile" aria-hidden="true"><svg><use href="#le-mark"/></svg></span><span><small data-i18n="ag_small">Агент агентства недвижимости</small><b>Leader Estate</b></span><svg class="ag-arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
     </div>
     <div class="portrait">
       <div class="p-tilt" id="ptilt">
@@ -604,7 +616,7 @@ input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-
       <p class="reveal" data-i18n="a_p1"></p>
       <p class="reveal" data-i18n="a_p2"></p>
       <div class="quote reveal" data-i18n="a_quote"></div>
-      <a class="agency-card reveal" href="https://www.instagram.com/leader_estate.tm/" target="_blank" rel="noopener"><img src="/le-logo.jpg" alt="Leader Estate — Real Estate Excellence" width="500" height="500" loading="lazy"><div><small data-i18n="ag_lbl">Агентство</small><b data-i18n="ag_t">Работаю в агентстве Leader Estate</b><p data-i18n="ag_d">Агентство недвижимости в Ашхабаде, в команде которого я работаю.</p><span class="ag-ig">@leader_estate.tm →</span></div></a>
+      <a class="agency-card reveal" href="https://www.instagram.com/leader_estate.tm/" target="_blank" rel="noopener"><span class="le-tile le-big" role="img" aria-label="Leader Estate — Real Estate Excellence"><svg class="le-m"><use href="#le-mark"/></svg><span class="le-name">LEADER ESTATE</span><span class="le-sub">REAL ESTATE EXCELLENCE</span></span><div><small data-i18n="ag_lbl">Агентство</small><b data-i18n="ag_t">Работаю в агентстве Leader Estate</b><p data-i18n="ag_d">Агентство недвижимости в Ашхабаде, в команде которого я работаю.</p><span class="ag-ig">@leader_estate.tm →</span></div></a>
       <div class="facts reveal">
         <div class="fact"><b data-i18n="f1_t"></b><span data-i18n="f1_d"></span></div>
         <div class="fact"><b data-i18n="f2_t"></b><span data-i18n="f2_d"></span></div>
